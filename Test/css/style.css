@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(221, 221, 221);
+}
+
+#header {
+    width: 100%;
+    background-color: rgb(92, 92, 92);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header-content .navbar > a {
+    text-decoration: none;
+    color: tomato;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.header-content .counter-container {
+    font-size: 2rem;
+    color:rgb(248, 126, 105);
+    cursor: pointer;
+    position: relative;
+}
+
+.header-content .counter-container a{
+    text-decoration: none;
+    color: tomato;
+    font-size: 2rem;
+}
+
+.counter-container span {
+    border: 1px solid tomato;
+    user-select: none;
+    position: absolute;
+    background: rgb(92, 92, 92);
+    width: 1.3rem;
+    height: 1.3rem;
+    font-size: .8rem;
+    border-radius: 50%;
+    color: tomato;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: .04rem;
+    right: -1.3rem;
+}
+
+.counter-container span:not(.animated-counter) {
+    display: none;
+}
+
+.counter-container span .animated-counter {
+    animation: count .4s ease-in-out;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: tomato;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.home {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.card-body {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 100%;
+    grid-template-areas: "card-price btn__heart";
+}
+
+.card-body .card-price{
+    padding-top: .8rem;
+    font-weight: bold;
+    color: #f00;
+}
+
+.card-body .card-price del {
+    font-weight: normal;
+    font-size: .9rem;
+    padding-left: 4rem;
+    color: #000;
+}
+
+.card-img-top {
+    height: 400px;
+}
+
+.btn__heart {
+    border: none;
+    outline: none;
+    color: grey;
+    background-color: transparent;
+    font-size: 2em;
+    transition: transform .2s;
+}
+
+.btn__heart i:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+} 
+
+.home-content .card .add-to-cart{
+    width:100%;
+    height:50px;
+    background-color: tomato;
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+    font-size: 1.5em;
+    transform: opacity color .8s;
+}
+
+.home-content .card .add-to-cart:hover{
+    opacity: .8;
+    background: rgb(248, 126, 105);
+}
+
+#cart {
+    display: none;
+    height: 100vh;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.cart-content {
+    width: 65%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgb(92,92,92);
+    border-radius: 5px;
+}
+
+.cart-content .total-price {
+    margin: auto;
+    width: 30%;
+    height: 3rem;
+    background-color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    padding-top: .7rem;
+}
+
+
+.cart-content .title {
+    text-transform: capitalize;
+    font-size: 2.3rem;
+    margin: auto;
+    color: tomato;
+}
+
+.cart-content .mini-image {
+    width:3.5rem;
+    height: 3.5rem;
+}
+
+.cart-content .priceDiv {
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: .8rem;
+}
+
+.cart-content button {
+    margin-top: .5rem;
+    height: 2.5rem;
+    font-weight: bold;
+}
+
+.cart-content .plus-btn {
+    margin-right: .7rem;
+    font-weight: bold;
+}
+
+.cart-content .min-btn {
+    margin-left: .7rem;
+    font-weight: bold;
+}
+
+.cart-content div .input {
+    margin-top: .7rem;
+    width: 4rem;
+    text-align: center;
+    border: none;
+}
+
+.cart-content .cart-col {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-content .cart-row{
+    border-radius: 5px;
+    margin: .5rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.footer {
+    background-color: rgb(92, 92, 92);
+    text-align: center;
+    color: tomato;
+    font-size: .8em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 10px 0;
+}
